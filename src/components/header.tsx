@@ -1,12 +1,14 @@
 import React from "react";
-import { Anchor, Box, Header } from "grommet";
+import { Anchor, Box, Header, Image } from "grommet";
+// import logo from '../../'
 
 interface Iprops {}
 
 const MyHeader = (props: Iprops) => {
   return (
-    <Header background="light-4" pad="small">
+    <Header background="background-contrast" pad="small">
       <Box direction="row" gap="medium">
+        <Image src="/map.jpeg" />
         <Anchor label="Home" href="#" />
         <Anchor label="Profile" href="#" />
       </Box>
