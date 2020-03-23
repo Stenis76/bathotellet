@@ -1,16 +1,32 @@
 import React from "react";
-import { Anchor, Box, Header, Image } from "grommet";
-// import logo from '../../'
+import {
+  FormField,
+  Box,
+  Header,
+  Image,
+  TextInput,
+  Heading,
+  Button
+} from "grommet";
+import { Search } from "grommet-icons";
+import logo from "../resources/motor.svg";
 
 interface Iprops {}
 
 const MyHeader = (props: Iprops) => {
   return (
-    <Header background="background-contrast" pad="small">
-      <Box direction="row" gap="medium">
-        <Image src="/map.jpeg" />
-        <Anchor label="Home" href="#" />
-        <Anchor label="Profile" href="#" />
+    <Header background="brand" pad="small" elevation="medium" justify="between">
+      <Box direction="row" gap="small">
+        <Image src={logo} height="45" />
+        <Heading size="small" alignSelf="center" margin="xsmall">
+          Båthotell
+        </Heading>
+      </Box>
+      <Box direction="row" gap="small">
+        <FormField>
+          <TextInput placeholder="Vad söker du?" />
+        </FormField>
+        <Button plain={false} icon={<Search />}></Button>
       </Box>
     </Header>
   );

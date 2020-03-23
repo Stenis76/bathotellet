@@ -1,8 +1,10 @@
 import React from "react";
 import MyHeader from "./components/header";
 import Home from "./pages/home";
-import { Grommet, Heading, Text, Box, Button, grommet } from "grommet";
+
+import { Grommet, grommet, ResponsiveContext, Box } from "grommet";
 import { deepMerge } from "grommet/utils";
+import Sidebar from "./components/sidebar";
 
 const customTheme = deepMerge(grommet, {
   global: {
@@ -28,7 +30,7 @@ const customTheme = deepMerge(grommet, {
       }
     },
     font: {
-      family: "Roboto",
+      family: "Raleway",
       size: "18px",
       height: "20px"
     }
@@ -38,9 +40,15 @@ const customTheme = deepMerge(grommet, {
 function App() {
   return (
     <Grommet theme={customTheme}>
-      <MyHeader />
-      <Home />
-      <Heading level="3">Dick Rules</Heading>
+      <ResponsiveContext.Consumer>
+        {size => (
+          <Box fill>
+            <MyHeader />
+            <Sidebar />
+            <Home />
+          </Box>
+        )}
+      </ResponsiveContext.Consumer>
     </Grommet>
   );
 }
