@@ -1,9 +1,13 @@
 import React from "react";
 import { Main, Box, Button, Text, Heading, Paragraph, Grid } from "grommet";
+import News from "../components/homecards/news";
+import Info from "../components/homecards/info";
+import Deals from "../components/homecards/deals";
+import Events from "../components/homecards/events";
 
 function Home() {
   return (
-    <Main gridArea="main" background="dark-5">
+    <Main gridArea="main" background="light-1">
       <Grid
         fill="vertical"
         rows={["auto", "auto", "auto"]}
@@ -11,24 +15,17 @@ function Home() {
         gap="medium"
         margin="medium"
         areas={[
-          { name: "about", start: [0, 0], end: [0, 1] },
+          { name: "info", start: [0, 0], end: [0, 1] },
           { name: "deals", start: [0, 2], end: [2, 2] },
-          { name: "customers", start: [1, 0], end: [2, 1] },
-          { name: "fallCollection", start: [2, 0], end: [2, 2] }
+          { name: "news", start: [1, 0], end: [2, 1] },
+          { name: "events", start: [2, 0], end: [2, 2] }
         ]}
       >
-        <Box gridArea="about" background="green">
-          about
-        </Box>
-        <Box gridArea="deals" background="blue">
-          Deals
-        </Box>
-        <Box gridArea="customers" background="light-2">
-          customers
-        </Box>
-        <Box gridArea="fallCollection" background="red">
-          fall
-        </Box>
+        <Info />
+        <Deals />
+        <News />
+
+        <Events />
       </Grid>
     </Main>
   );
