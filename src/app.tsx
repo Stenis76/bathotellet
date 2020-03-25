@@ -29,6 +29,7 @@ const customTheme = deepMerge(grommet, {
         light: "#00C8FF"
       }
     },
+
     font: {
       family: "Raleway",
       size: "18px",

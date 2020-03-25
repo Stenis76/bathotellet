@@ -5,16 +5,15 @@ interface Iprops {}
 
 const Sidebar = (props: Iprops) => {
   return (
-    <Box fill gridArea="sidebar" background="light-3" width="small">
-      <Text size="xxlarge"></Text>
+    <Box fill gridArea="sidebar" background="light-1" width="small">
       {[
         "Vinterförvaring",
         "Bli kund",
-        "Vattenpolering & Vax",
+        "Vattenpolering",
         "Partners",
         "Båtförsäljning"
       ].map(name => (
-        <Button key={name} href="#" hoverIndicator>
+        <Button key={name} href="#" hoverIndicator margin="small">
           <Box pad={{ horizontal: "medium", vertical: "small" }}>
             <Text>{name}</Text>
           </Box>

@@ -6,9 +6,11 @@ import {
   Image,
   TextInput,
   Heading,
-  Button
+  Button,
+  Nav,
+  Anchor
 } from "grommet";
-import { Search } from "grommet-icons";
+import { Search, Home, Contact, Share } from "grommet-icons";
 import logo from "../resources/motor.svg";
 
 interface Iprops {}
@@ -25,7 +27,7 @@ const MyHeader = (props: Iprops) => {
       <Box direction="row" gap="small">
         <Image src={logo} height="45" />
         <Heading size="small" alignSelf="center" margin="xsmall">
-          Båthotell
+          Båthotellet
         </Heading>
       </Box>
       <Box direction="row" gap="small">
@@ -33,6 +35,10 @@ const MyHeader = (props: Iprops) => {
           <TextInput placeholder="Vad söker du?" />
         </FormField>
         <Button plain={false} icon={<Search />}></Button>
+
+        <Anchor icon={<Home />} />
+        <Anchor icon={<Contact />} />
+        <Anchor icon={<Share />} />
       </Box>
     </Header>
   );
