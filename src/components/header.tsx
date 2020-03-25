@@ -15,7 +15,13 @@ interface Iprops {}
 
 const MyHeader = (props: Iprops) => {
   return (
-    <Header background="brand" pad="small" elevation="medium" justify="between">
+    <Header
+      gridArea="header"
+      background="brand"
+      pad="small"
+      elevation="medium"
+      justify="between"
+    >
       <Box direction="row" gap="small">
         <Image src={logo} height="45" />
         <Heading size="small" alignSelf="center" margin="xsmall">

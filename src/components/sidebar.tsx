@@ -5,19 +5,15 @@ interface Iprops {}
 
 const Sidebar = (props: Iprops) => {
   return (
-    <Box
-      gridArea="sidebar"
-      direction="column"
-      background="dark-3"
-      width="small"
-      height="100vh"
-      animation={[
-        { type: "fadeIn", duration: 300 },
-        { type: "slideRight", size: "xlarge", duration: 150 }
-      ]}
-    >
-      <Text size="xxlarge">Sidebar</Text>
-      {["First", "Second", "Third"].map(name => (
+    <Box fill gridArea="sidebar" background="light-3" width="small">
+      <Text size="xxlarge"></Text>
+      {[
+        "Vinterförvaring",
+        "Bli kund",
+        "Vattenpolering & Vax",
+        "Partners",
+        "Båtförsäljning"
+      ].map(name => (
         <Button key={name} href="#" hoverIndicator>
           <Box pad={{ horizontal: "medium", vertical: "small" }}>
             <Text>{name}</Text>
