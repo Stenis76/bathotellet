@@ -11,7 +11,7 @@ function Home() {
       <Grid
         fill="vertical"
         rows={["auto", "auto", "auto"]}
-        columns={["auto", "1/2", "auto"]}
+        columns={["1/4", "1/2", "auto"]}
         gap="medium"
         margin="medium"
         areas={[

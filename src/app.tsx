@@ -8,10 +8,27 @@ import Sidebar from "./components/sidebar";
 
 const customTheme = deepMerge(grommet, {
   global: {
+    hover: {
+      background: {
+        color: "#FFFADE",
+        opacity: "medium"
+      },
+      color: {
+        dark: "white",
+        light: "#000060"
+      }
+    },
     colors: {
       brand: "#000060",
-      acc: "#7CB3C5",
-      beige: "#E8D5B5",
+      focus: "#81D6C3",
+      selected: "#81D6C3",
+
+      button: "#FFFADE",
+      icon: {
+        dark: "#81D6C3",
+        light: "#FFFADE"
+      },
+
       "background-back": {
         dark: "#1A1F2B",
         light: "#EFEFEF"

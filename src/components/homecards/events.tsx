@@ -9,24 +9,46 @@ const Events = (props: Iprops) => {
   const pic = `url(${picture})`;
   return (
     <Box
-      justify="center"
+      justify="start"
       round="small"
       gridArea="events"
       elevation="medium"
       background={pic}
-      alignContent="center"
+      align="center"
     >
-      {/* <Image
-        fit="contain"
-        src={fairlogo}
-        style={{
-          width: "15rem",
-          margin: 10,
-          padding: 10,
-          position: "relative"
+      <Box
+        direction="column"
+        margin="small"
+        round="medium"
+        width="medium"
+        align="center"
+        pad="small"
+        background={{
+          color: "rgba(0, 0, 0, 0.6)"
         }}
-      /> */}
-      <Text> Möt oss på båtmässan</Text>
+      >
+        <Image
+          fit="contain"
+          src={fairlogo}
+          style={{
+            width: "15rem",
+            margin: 10,
+            padding: 10,
+            position: "relative"
+          }}
+        />
+        <Text
+          size="large"
+          alignSelf="center"
+          color="light-1"
+          style={{
+            fontStyle: "italic"
+          }}
+        >
+          Möt oss på båtmässan i Göteborg, vi finns i monter 22:3. Glöm inte att
+          ta del av våra mässrabbatter!
+        </Text>
+      </Box>
     </Box>
   );
 };

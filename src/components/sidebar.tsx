@@ -1,24 +1,41 @@
 import React from "react";
-import { Anchor, Box, Header, Button, Text } from "grommet";
+import { Box, Button, Text } from "grommet";
+import { Instagram, Facebook, Linkedin } from "grommet-icons";
 
 interface Iprops {}
 
 const Sidebar = (props: Iprops) => {
   return (
-    <Box fill gridArea="sidebar" background="light-1" width="small">
-      {[
-        "Vinterförvaring",
-        "Bli kund",
-        "Vattenpolering",
-        "Partners",
-        "Båtförsäljning"
-      ].map(name => (
-        <Button key={name} href="#" hoverIndicator margin="small">
-          <Box pad={{ horizontal: "medium", vertical: "small" }}>
+    <Box
+      fill
+      justify="between"
+      gridArea="sidebar"
+      background="light-3"
+      width="small"
+    >
+      <Box pad={{ horizontal: "medium", vertical: "small" }}>
+        {[
+          "Vinterförvaring",
+          "Bli kund",
+          "Vattenpolering",
+          "Partners",
+          "Båtförsäljning"
+        ].map(name => (
+          <Button key={name} href="#" hoverIndicator margin="small">
             <Text>{name}</Text>
-          </Box>
-        </Button>
-      ))}
+          </Button>
+        ))}
+      </Box>
+      <Box
+        pad="small"
+        justify="evenly"
+        direction="row-responsive"
+        background="brand"
+      >
+        <Instagram />
+        <Facebook />
+        <Linkedin />
+      </Box>
     </Box>
   );
 };
