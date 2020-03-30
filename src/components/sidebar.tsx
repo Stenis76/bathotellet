@@ -13,7 +13,7 @@ const Sidebar = (props: Iprops) => {
       background="light-3"
       width="small"
     >
-      <Box pad={{ horizontal: "medium", vertical: "small" }}>
+      <Box pad="small">
         {[
           "Vinterförvaring",
           "Bli kund",
@@ -21,7 +21,13 @@ const Sidebar = (props: Iprops) => {
           "Partners",
           "Båtförsäljning"
         ].map(name => (
-          <Button key={name} href="#" hoverIndicator margin="small">
+          <Button
+            fill="horizontal"
+            key={name}
+            href="#"
+            hoverIndicator
+            margin="small"
+          >
             <Text>{name}</Text>
           </Button>
         ))}

@@ -20,7 +20,6 @@ const Events = (props: Iprops) => {
         direction="column"
         margin="small"
         round="medium"
-        width="medium"
         align="center"
         pad="small"
         background={{
@@ -39,14 +38,13 @@ const Events = (props: Iprops) => {
         />
         <Text
           size="large"
-          alignSelf="center"
           color="light-1"
           style={{
             fontStyle: "italic"
           }}
         >
-          Möt oss på båtmässan i Göteborg, vi finns i monter 22:3. Glöm inte att
-          ta del av våra mässrabbatter!
+          Träffa oss på båtmässan i Göteborg, vi finns i monter 22:3. Glöm inte
+          att ta del av våra mässrabbatter!
         </Text>
       </Box>
     </Box>
